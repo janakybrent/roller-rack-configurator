@@ -43,7 +43,7 @@ with col1:
         ctrl_system = st.radio("", ["R (R2P™ 2.0)", "S (STANDARD)"])
 
         ctrl_location = st.radio("Step 2: Select Control System Location", ["T (Top Mounted)", "B (Bottom Mounted)"])
-        deck_spacing = st.radio("Step 3: Select Deck Spacing", ["P (Production - 6")", "M (Modular - 7.125")"])
+        deck_spacing = st.radio("Step 3: Select Deck Spacing", ["P (Production - 6\")", "M (Modular - 7.125\")"])
         deck_type = st.radio("Step 4: Select Deck Type", ["F (Fixed)", "R (Removable)"])
         capacity = st.radio("Step 5: Select Capacity", ["5", "8"])
         deck_options = [f"{i:02}" for i in range(1, 12 if capacity == "5" else 10)]
