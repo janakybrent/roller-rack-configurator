@@ -34,11 +34,10 @@ with col1:
     with st.form("config_form"):
         ctrl_system = st.radio("Step 1: Control System Type", ["R (R2P™ 2.0)", "S (STANDARD)"])
         ctrl_location = st.radio("Step 2: Control System Location", ["T (Top Mounted)", "B (Bottom Mounted)"])
-        deck_spacing = st.radio("Step 3: Deck Spacing", ["P (Production - 6")", "M (Modular - 7.125")"])
+        deck_spacing = st.radio("Step 3: Deck Spacing", ["P (Production - 6\")", "M (Modular - 7.125\")"])
         deck_type = st.radio("Step 4: Deck Type", ["F (Fixed)", "R (Removable)"])
         capacity = st.radio("Step 5: Capacity", ["5", "8"])
 
-        # Validate deck number dynamically
         deck_options = [f"{i:02}" for i in range(1, 12 if capacity == "5" else 10)]
         deck_number = st.selectbox("Step 6: Number of Decks", deck_options)
 
